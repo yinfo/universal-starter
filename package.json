@@ -26,13 +26,16 @@
     "generate:prerender": "cd dist && node prerender",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:prerender": "cd dist/browser && http-server",
-    "serve:ssr": "node dist/server"
+    "serve:ssr": "node dist/server",
+    "postinstall": "ng build --aot -prod"
   },
   "pre-commit": [
     "lint"
   ],
   "private": true,
   "dependencies": {
+    "@angular/cli": "^1.5.0",
+    "@angular/compiler-cli": "^5.0.0",
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
@@ -48,21 +51,24 @@
     "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.8",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.2",
+    "typescript": "~2.4.2",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "^1.5.0",
-    "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "@types/node": "^8.0.30",
     "codelyzer": "^4.0.2",
     "cpy-cli": "^1.0.1",
+    "enhanced-resolve": "^3.3.0",
     "express": "^4.15.2",
     "http-server": "^0.10.0",
     "pre-commit": "^1.2.2",
     "reflect-metadata": "^0.1.10",
     "ts-loader": "^2.3.7",
-    "tslint": "^5.7.0",
-    "typescript": "~2.4.2"
+    "tslint": "^5.7.0"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.8.0"
   }
 }

@@ -3,7 +3,7 @@ import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-lazy-view',
-  template: `<h3>Я ленивая хрень 2</h3>`
+  template: `<h3>Я ленивая хрень 3</h3>`
 })
 export class LazyComponent {}
 

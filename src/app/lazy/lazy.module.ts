@@ -3,9 +3,21 @@ import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-lazy-view',
-  template: `<h3>Я ленивая хрень 4</h3>`
+  template: `<h3>{{message}}</h3>
+  <button (click)="increase($event)">clickBtn</button>
+  `
 })
-export class LazyComponent {}
+
+
+export class LazyComponent {
+  public message: string;
+  count = 0;
+  increase($event): void {
+    this.count++;
+    this.message = 'LazyComponent' + this.count;
+    console.log(this.message);
+  }
+}
 
 @NgModule({
   declarations: [LazyComponent],
@@ -16,5 +28,7 @@ export class LazyComponent {}
   ]
 })
 export class LazyModule {
+
+
 
 }

@@ -11,8 +11,8 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
  import {HttpClientModule} from '@angular/common/http';
  import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
  import {FlexLayoutModule} from '@angular/flex-layout';
-// import {
-//     MatButtonModule,
+ import {
+     MatButtonModule,
 //     MatCardModule,
 //     MatCheckboxModule,
 //     MatDialogModule,
@@ -25,7 +25,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
 //     MatSlideToggleModule,
 //     MatTabsModule,
 //     MatToolbarModule
-// } from '@angular/material';
+ } from '@angular/material';
 //
 // import 'hammerjs';
 
@@ -47,7 +47,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
          HttpClientModule,
          BrowserAnimationsModule,
         // // Material
-        // MatButtonModule,
+         MatButtonModule,
         // MatCardModule,
         // MatCheckboxModule,
         // MatDialogModule,

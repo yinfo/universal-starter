@@ -6,28 +6,28 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {TransferHttpCacheModule} from '@nguniversal/common';
 
-// material
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {
-    MatButtonModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatDialogModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatTabsModule,
-    MatToolbarModule
-} from '@angular/material';
-
-import 'hammerjs';
+// // material
+// import {FormsModule} from '@angular/forms';
+// import {HttpClientModule} from '@angular/common/http';
+// import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// import {FlexLayoutModule} from '@angular/flex-layout';
+// import {
+//     MatButtonModule,
+//     MatCardModule,
+//     MatCheckboxModule,
+//     MatDialogModule,
+//     MatIconModule,
+//     MatInputModule,
+//     MatListModule,
+//     MatMenuModule,
+//     MatSelectModule,
+//     MatSidenavModule,
+//     MatSlideToggleModule,
+//     MatTabsModule,
+//     MatToolbarModule
+// } from '@angular/material';
+//
+// import 'hammerjs';
 
 @NgModule({
     declarations: [
@@ -42,27 +42,27 @@ import 'hammerjs';
             {path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
         ]),
         TransferHttpCacheModule,
-        // For material
-        FormsModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        // Material
-        MatButtonModule,
-        MatCardModule,
-        MatCheckboxModule,
-        MatDialogModule,
-        MatIconModule,
-        MatInputModule,
-        MatListModule,
-        MatMenuModule,
-        MatSelectModule,
-        MatSidenavModule,
-        MatSlideToggleModule,
-        MatTabsModule,
-        MatToolbarModule,
-
-        // Flex-layout
-        FlexLayoutModule
+        // // For material
+        // FormsModule,
+        // HttpClientModule,
+        // BrowserAnimationsModule,
+        // // Material
+        // MatButtonModule,
+        // MatCardModule,
+        // MatCheckboxModule,
+        // MatDialogModule,
+        // MatIconModule,
+        // MatInputModule,
+        // MatListModule,
+        // MatMenuModule,
+        // MatSelectModule,
+        // MatSidenavModule,
+        // MatSlideToggleModule,
+        // MatTabsModule,
+        // MatToolbarModule,
+        //
+        // // Flex-layout
+        // FlexLayoutModule
 
 
     ],

@@ -10,7 +10,7 @@ import {RouterModule} from '@angular/router';
 
 
 export class LazyComponent {
-  public message: string;
+  public message:string = '0';
   count = 0;
   increase($event): void {
     this.count++;

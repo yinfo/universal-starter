@@ -5,7 +5,7 @@ import {Component, OnInit} from '@angular/core';
   template: `<h3>{{ message }}</h3><button (click)="increase($event)">clickBtn</button>`
 })
 export class HomeComponent implements OnInit {
-  public message: string;
+  public message: string = '0';
   count = 0;
   constructor() {}
 

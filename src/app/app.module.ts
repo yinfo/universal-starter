@@ -7,10 +7,10 @@ import {HomeComponent} from './home/home.component';
 import {TransferHttpCacheModule} from '@nguniversal/common';
 
 // // material
-// import {FormsModule} from '@angular/forms';
-// import {HttpClientModule} from '@angular/common/http';
-// import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import {FlexLayoutModule} from '@angular/flex-layout';
+ import {FormsModule} from '@angular/forms';
+ import {HttpClientModule} from '@angular/common/http';
+ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+ import {FlexLayoutModule} from '@angular/flex-layout';
 // import {
 //     MatButtonModule,
 //     MatCardModule,
@@ -43,9 +43,9 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
         ]),
         TransferHttpCacheModule,
         // // For material
-        // FormsModule,
-        // HttpClientModule,
-        // BrowserAnimationsModule,
+         FormsModule,
+         HttpClientModule,
+         BrowserAnimationsModule,
         // // Material
         // MatButtonModule,
         // MatCardModule,
@@ -62,7 +62,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
         // MatToolbarModule,
         //
         // // Flex-layout
-        // FlexLayoutModule
+         FlexLayoutModule
 
 
     ],

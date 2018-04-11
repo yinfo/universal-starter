@@ -13,7 +13,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
  import {FlexLayoutModule} from '@angular/flex-layout';
  import {
      MatButtonModule,
-     MatCardModule,
+    // MatCardModule,
 //     MatCheckboxModule,
 //     MatDialogModule,
 //     MatIconModule,
@@ -48,7 +48,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
          BrowserAnimationsModule,
         // // Material
          MatButtonModule,
-         MatCardModule,
+         // MatCardModule,
         // MatCheckboxModule,
         // MatDialogModule,
         // MatIconModule,

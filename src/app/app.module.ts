@@ -6,14 +6,16 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {TransferHttpCacheModule} from '@nguniversal/common';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 // // material
- import {FormsModule} from '@angular/forms';
- import {HttpClientModule} from '@angular/common/http';
- import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
- import {FlexLayoutModule} from '@angular/flex-layout';
-  import {
-      MatButtonModule,
-     MatCardModule,
+ // import {FormsModule} from '@angular/forms';
+// import {HttpClientModule} from '@angular/common/http';
+ // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// import {FlexLayoutModule} from '@angular/flex-layout';
+//  import {
+//      MatButtonModule,
+ //    MatCardModule,
 //     MatCheckboxModule,
 //     MatDialogModule,
 //     MatIconModule,
@@ -25,7 +27,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
 //     MatSlideToggleModule,
 //     MatTabsModule,
 //     MatToolbarModule
-  } from '@angular/material';
+//  } from '@angular/material';
 //
  // import 'hammerjs';
 
@@ -42,13 +44,14 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
             {path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
         ]),
         TransferHttpCacheModule,
+        NgbModule.forRoot(),
         // // For material
-         FormsModule,
-         HttpClientModule,
-         BrowserAnimationsModule,
+         //  FormsModule,
+         //  HttpClientModule,
+         //  BrowserAnimationsModule,
         // // Material
-          MatButtonModule,
-          MatCardModule,
+          //  MatButtonModule,
+          //  MatCardModule,
         // MatCheckboxModule,
         // MatDialogModule,
         // MatIconModule,
@@ -62,7 +65,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
         // MatToolbarModule,
         //
         // // Flex-layout
-         FlexLayoutModule
+         // FlexLayoutModule
 
 
     ],

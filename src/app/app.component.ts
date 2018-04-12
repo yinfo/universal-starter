@@ -1,26 +1,36 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-    users = [
-        {
-            name: 'Lia Lugo',
-            avatar: 'svg-11',
-            details: 'I love cheese, ...',
-            isAdmin: true,
-            isCool: false
-        },
-        {
-            name: 'George Duke',
-            avatar: 'svg-12',
-            details: 'Zombie ipsum ...',
-            isAdmin: false,
-            isCool: true
-        }
-        // ...
-    ];
+export class AppComponent implements OnInit {
+    alerts: Array<any> = [];
+    constructor() {
+        this.alerts.push({
+            id: 1,
+            type: 'success',
+            message: 'This is an success alert',
+        }, {
+            id: 2,
+            type: 'info',
+            message: 'This is an info alert',
+        }, {
+            id: 3,
+            type: 'warning',
+            message: 'This is a warning alert',
+        }, {
+            id: 4,
+            type: 'danger',
+            message: 'This is a danger alert',
+        });
+    }
+
+    ngOnInit() { }
+
+    public closeAlert(alert: any) {
+        const index: number = this.alerts.indexOf(alert);
+        this.alerts.splice(index, 1);
+    }
 }

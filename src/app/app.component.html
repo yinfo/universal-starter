@@ -1,60 +1,12 @@
-<div class="button-row">
-    <button mat-button>Basic</button>
-    <button mat-button color="primary">Primary</button>
-    <button mat-button color="accent">Accent</button>
-    <button mat-button color="warn">Warn</button>
-    <button mat-button disabled>Disabled</button>
-    <a mat-button routerLink=".">Link 1</a>
-
-    <mat-card class="example-card">
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-            <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.
-            </p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-        </mat-card-actions>
-    </mat-card>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-3">
+            <div class="card-header">Buttons</div>
+            <div class="card-body">
+                <p *ngFor="let alert of alerts">
+                    <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-
-<!--<div fxLayout="column" fxFlex>-->
-
-    <!--<mat-toolbar color="primary">-->
-        <!--<mat-toolbar-row>-->
-            <!--<span>Angular Material</span>-->
-        <!--</mat-toolbar-row>-->
-    <!--</mat-toolbar>-->
-
-    <!--<mat-sidenav-container fxFlex>-->
-        <!--<mat-sidenav mode="side" opened>-->
-            <!--<mat-tab-group>-->
-                <!--<mat-tab label="Users">-->
-                    <!--<mat-nav-list>-->
-                        <!--<mat-list-item *ngFor="let user of users">-->
-                            <!--<span>{{user.name}}</span>-->
-                        <!--</mat-list-item>-->
-                    <!--</mat-nav-list>-->
-                <!--</mat-tab>-->
-                <!--<mat-tab label="Settings">-->
-                    <!--<span>Settings</span>-->
-                <!--</mat-tab>-->
-            <!--</mat-tab-group>-->
-        <!--</mat-sidenav>-->
-
-
-        <!--<div class="content">-->
-            <!--Page Content-->
-        <!--</div>-->
-    <!--</mat-sidenav-container>-->
-
-<!--</div>-->

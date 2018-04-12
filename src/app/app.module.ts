@@ -8,8 +8,14 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+import {PlayerComponent} from './components/player/player.component';
+import {PlayerService} from './components/player/player.service';
+import {TimingPipe } from './shared/pipes/timing.pipe';
+import { HttpClientModule } from '@angular/common/http';
+
 // // material
- // import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 // import {HttpClientModule} from '@angular/common/http';
  // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {FlexLayoutModule} from '@angular/flex-layout';
@@ -35,18 +41,24 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     declarations: [
         AppComponent,
         HomeComponent,
+        PlayerComponent,
+        TimingPipe,
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'my-app'}),
         RouterModule.forRoot([
-            {path: '', component: HomeComponent, pathMatch: 'full'},
+            {path: '', component: PlayerComponent, pathMatch: 'full'},
             {path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
             {path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
         ]),
         TransferHttpCacheModule,
         NgbModule.forRoot(),
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+
         // // For material
-         //  FormsModule,
+
          //  HttpClientModule,
          //  BrowserAnimationsModule,
         // // Material
@@ -69,7 +81,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
     ],
-    providers: [],
+    providers: [PlayerService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

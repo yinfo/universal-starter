@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {map} from 'rxjs/operators';
 
 @Component({
     selector: 'app-root',
@@ -6,31 +8,20 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    alerts: Array<any> = [];
-    constructor() {
-        this.alerts.push({
-            id: 1,
-            type: 'success',
-            message: 'This is an success alert',
-        }, {
-            id: 2,
-            type: 'info',
-            message: 'This is an info alert',
-        }, {
-            id: 3,
-            type: 'warning',
-            message: 'This is a warning alert',
-        }, {
-            id: 4,
-            type: 'danger',
-            message: 'This is a danger alert',
-        });
+    images: Array<string>;
+
+    constructor(private _http: HttpClient) {}
+
+    ngOnInit() {
+        this._http.get('https://picsum.photos/list')
+            .pipe(map((images: Array<{id: number}>) => this._randomImageUrls(images)))
+            .subscribe(images => this.images = images);
     }
 
-    ngOnInit() { }
-
-    public closeAlert(alert: any) {
-        const index: number = this.alerts.indexOf(alert);
-        this.alerts.splice(index, 1);
+    private _randomImageUrls(images: Array<{id: number}>): Array<string> {
+        return [1, 2, 3].map(() => {
+            const randomId = images[Math.floor(Math.random() * images.length)].id;
+            return `https://picsum.photos/900/500?image=${randomId}`;
+        });
     }
 }

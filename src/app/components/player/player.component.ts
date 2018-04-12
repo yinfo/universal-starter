@@ -9,14 +9,13 @@ import { PlayerService, Track } from './player.service';
 export class PlayerComponent implements OnDestroy {
   @Input()
   @HostBinding('class.collapsed')
-  collapsed: boolean;
+
 
   track: Track;
   player: HTMLAudioElement;
   shuffle: boolean;
 
   constructor(private playerService: PlayerService) {
-    debugger;
     this.track = this.playerService.random();
     this.createPlayer();
   }
